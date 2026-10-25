@@ -150,6 +150,14 @@ h1,h2,h3{ font-family:"Sora", "IBM Plex Sans", sans-serif; text-wrap:balance; ma
 .btn[disabled]{ opacity:.45; cursor:not-allowed; transform:none; box-shadow:none; }
 .btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
 
+.btn.ghost.copied{
+  border-color:var(--success); color:var(--success);
+  animation: copiedFlash .4s ease;
+}
+@keyframes copiedFlash{
+  0%{ transform:scale(1); } 40%{ transform:scale(1.04); } 100%{ transform:scale(1); }
+}
+
 .ripple{
   position:absolute; border-radius:50%; pointer-events:none;
   background:rgba(255,255,255,.5); transform:scale(0);
